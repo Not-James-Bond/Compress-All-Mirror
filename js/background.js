@@ -1,3 +1,4 @@
+chrome.runtime.onInstalled.addListener(function() {
 var contextMenuItem ={
     "id":"compress",
     "title":"compress",
