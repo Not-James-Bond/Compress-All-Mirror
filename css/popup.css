@@ -1,0 +1,18 @@
+img {border-width: 0}
+* {
+    font-family:'Lucida Grande', sans-serif;
+}
+
+.block a:hover{
+    color: silver;
+}
+.block a{
+    color: #fff;
+}
+.block {
+    position: fixed;
+    background: #2184cd;
+    padding: 20px;
+    z-index: 1;
+    top: 240px;
+}
