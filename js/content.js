@@ -1,3 +1,4 @@
+/*
 function process() {
   const file = document.querySelector("#upload").files[0];
 
@@ -31,3 +32,4 @@ function process() {
     };
   };
 }
+*/
