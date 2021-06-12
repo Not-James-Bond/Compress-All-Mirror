@@ -30,7 +30,7 @@ function readFile(evt) {
         return false;
     }
 
-    var quality = 30;
+    var quality = 30;  // we can do this manually
        
     console.log("process start...");
     console.log("process start compress ...");
