@@ -30,7 +30,8 @@ function readFile(evt) {
         return false;
     }
 
-    var quality = 30;  // we can do this manually
+    var quality = prompt("Enter Percentage of Image to be Compressed", "30");  // we can do this manually
+    quality = 100 - parseInt(quality);
        
     console.log("process start...");
     console.log("process start compress ...");
