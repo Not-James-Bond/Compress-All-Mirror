@@ -1,5 +1,8 @@
 var output_format = null;
 var file_name = null;
+var file_size;
+var csize;
+var csize1;
 function readFile(evt) {
     var file = evt.target.files[0];
     var reader = new FileReader();
@@ -17,11 +20,23 @@ function readFile(evt) {
     console.log("Filename:" + file.name);
     console.log("Fileformat:" + output_format);
     console.log("Filesize:" + (parseInt(file.size) / 1024) + " Kb");
+    file_size = parseInt(file.size) / 1024;
     console.log("Type:" + file.type);
     reader.readAsDataURL(file);
     $("#compress").show();
     return false;
 }
+
+    var myslider = document.getElementById("myRange");
+    var output = document.getElementById("csize");
+    output.innerHTML = myslider.value;
+    var size_to_comp;
+    var quality;
+    myslider.oninput = function() {
+      quality = this.value;
+      size_to_comp = (file_size*this.value)/100;
+      output.innerHTML = size_to_comp;
+    }
 // compress image
  $( "#compress" ).click(function() {
     var source_image = document.getElementById("source_image");
@@ -30,8 +45,8 @@ function readFile(evt) {
         return false;
     }
 
-    var quality = prompt("Enter Percentage of Image to be Compressed", "30");  // we can do this manually
-    quality = 100 - parseInt(quality);
+/*    var quality = prompt("Enter Percentage of Image to be Compressed", "30");  // we can do this manually */
+    quality = parseInt(quality);
        
     console.log("process start...");
     console.log("process start compress ...");
