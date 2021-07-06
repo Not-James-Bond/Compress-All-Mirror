@@ -2,7 +2,7 @@ var output_format = null;
 var file_name = null;
 var file_size;
 var csize;
-var csize1;
+var quality;
 function readFile(evt) {
     var file = evt.target.files[0];
     var reader = new FileReader();
@@ -31,11 +31,12 @@ function readFile(evt) {
     var output = document.getElementById("csize");
     output.innerHTML = myslider.value;
     var size_to_comp;
-    var quality;
     myslider.oninput = function() {
       quality = this.value;
       size_to_comp = (file_size*this.value)/100;
       output.innerHTML = size_to_comp;
+      console.log("qual" + quality);
+      console.log("size" + size_to_comp);
     }
 // compress image
  $( "#compress" ).click(function() {
@@ -45,17 +46,18 @@ function readFile(evt) {
         return false;
     }
 
-/*    var quality = prompt("Enter Percentage of Image to be Compressed", "30");  // we can do this manually */
+/*    var quality = prompt("Enter Percentage upto which of Image to be Compressed", "30");  // we can do this manually */
+    console.log("qualPre" + quality);
     quality = parseInt(quality);
-       
+    console.log("qualPost" + quality);
     console.log("process start...");
     console.log("process start compress ...");
     compressed_image.src = jic.compress(source_image,quality,output_format).src;
-    $("#upload").show();
+    $("#download").show();
     
 });
-// upload imange
-$( "#upload" ).click(function() {
+// download imange
+$( "#download" ).click(function() {
     var compressed_image = document.getElementById("compressed_image");
     if (compressed_image.src == "") {
         alert("You must compress image first!");
@@ -63,17 +65,17 @@ $( "#upload" ).click(function() {
     }
 
     var successCallback= function(response){
-        console.log("image uploaded successfully! :)");
+        console.log("image downloaded successfully! :)");
         console.log(response);       
     }
 
     var errorCallback= function(response){
-        console.log("image Filed to upload! :)");
+        console.log("image Filed to download! :)");
         console.log(response); 
     }
     
-    console.log("process start upload ...");
-    jic.upload(compressed_image, "upload.php", "file", file_name,successCallback,errorCallback);
+    console.log("process start download ...");
+    jic.download(compressed_image, "download.php", "file", file_name,successCallback,errorCallback);
     
 });
 

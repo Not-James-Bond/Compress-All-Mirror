@@ -21,7 +21,7 @@ var jic = {
              return result_image_obj;
         },
 
-        upload: function(compressed_img_obj, upload_url, file_input_name, filename, successCallback, errorCallback, duringCallback, customHeaders){
+        download: function(compressed_img_obj, download_url, file_input_name, filename, successCallback, errorCallback, duringCallback, customHeaders){
 
             if (XMLHttpRequest.prototype.sendAsBinary === undefined) {
                 XMLHttpRequest.prototype.sendAsBinary = function(string) {
@@ -85,7 +85,7 @@ var jic = {
             data = data.replace('data:' + type + ';base64,', '');
             var a = document.createElement('a');
             a.href = compressed_img_obj.src;
-            a.download = "output.png";
+            a.download = "output.jpeg";
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
