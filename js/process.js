@@ -1,8 +1,8 @@
 var output_format = null;
 var file_name = null;
-var file_size;
-var csize;
-var quality;
+var file_size = null;
+var csize = null;
+var quality = null;
 function readFile(evt) {
     var file = evt.target.files[0];
     var reader = new FileReader();

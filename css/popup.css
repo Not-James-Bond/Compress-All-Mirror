@@ -3,6 +3,10 @@ img {border-width: 0}
     font-family:'Lucida Grande', sans-serif;
 }
 
+.headin {
+  padding-left: 15px;
+}
+
 .block a:hover{
     color: silver;
 }
@@ -18,7 +22,10 @@ img {border-width: 0}
 }
 
 .slidecontainer {
+    padding-top: 18px;
     width: 100%;
+    margin-left: 5px;
+    padding-left: 13px;
   }
   
   .slider {
@@ -45,6 +52,10 @@ img {border-width: 0}
     cursor: pointer;
   }
   
+
+  .myRange {
+    margin-left: 5px;
+  }
   .slider::-moz-range-thumb {
     width: 25px;
     height: 25px;

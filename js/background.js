@@ -3,7 +3,9 @@ var jic = {
         compress: function(source_img_obj, quality, output_format){
              
              var mime_type;
-             if(output_format==="png"){
+             if (output_format==="pdf"){
+                 mime_type="file/pdf";
+             } else if(output_format==="png"){
                 mime_type = "image/png";
              } else if(output_format==="webp") {
                 mime_type = "image/webp";
@@ -85,7 +87,7 @@ var jic = {
             data = data.replace('data:' + type + ';base64,', '');
             var a = document.createElement('a');
             a.href = compressed_img_obj.src;
-            a.download = "output.jpeg";
+            a.download = "output.jpg";
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
