@@ -47,9 +47,9 @@ function readFile(evt) {
     }
 
 /*    var quality = prompt("Enter Percentage upto which of Image to be Compressed", "30");  // we can do this manually */
-    console.log("qualPre" + quality);
+   // console.log("qualPre" + quality);
     quality = parseInt(quality);
-    console.log("qualPost" + quality);
+   // console.log("qualPost" + quality);
     console.log("process start...");
     console.log("process start compress ...");
     compressed_image.src = jic.compress(source_image,quality,output_format).src;
