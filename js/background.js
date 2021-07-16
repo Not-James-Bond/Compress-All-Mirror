@@ -87,7 +87,7 @@ var jic = {
             data = data.replace('data:' + type + ';base64,', '');
             var a = document.createElement('a');
             a.href = compressed_img_obj.src;
-            a.download = "compressed."+output_format;
+            a.download = "compressed.jpg"; //+output_format;
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
