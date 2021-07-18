@@ -1,8 +1,8 @@
 var output_format = null;
 var file_name = null;
-var file_size;
-var csize;
-var quality;
+var file_size = null;
+var csize = null;
+var quality = null;
 function readFile(evt) {
     var file = evt.target.files[0];
     var reader = new FileReader();
@@ -33,8 +33,8 @@ function readFile(evt) {
     var size_to_comp;
     myslider.oninput = function() {
       quality = this.value;
-      size_to_comp = (file_size*this.value)/100;
-      output.innerHTML = size_to_comp;
+      size_to_comp = (file_size*this.value)/100; //making useless cause we'll use quality rather than size.
+      output.innerHTML = quality; //replacing size_to_comp with qual due to above reasons
       console.log("qual" + quality);
       console.log("size" + size_to_comp);
     }
@@ -47,9 +47,9 @@ function readFile(evt) {
     }
 
 /*    var quality = prompt("Enter Percentage upto which of Image to be Compressed", "30");  // we can do this manually */
-    console.log("qualPre" + quality);
+   // console.log("qualPre" + quality);
     quality = parseInt(quality);
-    console.log("qualPost" + quality);
+   // console.log("qualPost" + quality);
     console.log("process start...");
     console.log("process start compress ...");
     compressed_image.src = jic.compress(source_image,quality,output_format).src;
