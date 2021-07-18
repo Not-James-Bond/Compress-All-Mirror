@@ -33,8 +33,8 @@ function readFile(evt) {
     var size_to_comp;
     myslider.oninput = function() {
       quality = this.value;
-      size_to_comp = (file_size*this.value)/100;
-      output.innerHTML = size_to_comp;
+      size_to_comp = (file_size*this.value)/100; //making useless cause we'll use quality rather than size.
+      output.innerHTML = quality; //replacing size_to_comp with qual due to above reasons
       console.log("qual" + quality);
       console.log("size" + size_to_comp);
     }

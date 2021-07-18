@@ -4,7 +4,7 @@ var jic = {
              
              var mime_type;
              if (output_format==="pdf"){
-                 mime_type="file/pdf";
+                 mime_type="application/pdf";
              } else if(output_format==="png"){
                 mime_type = "image/png";
              } else if(output_format==="webp") {
