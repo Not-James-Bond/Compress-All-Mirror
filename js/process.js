@@ -3,6 +3,7 @@ var file_name = null;
 var file_size = null;
 var csize = null;
 var quality = null;
+var pdff = null;
 function readFile(evt) {
     var file = evt.target.files[0];
     var reader = new FileReader();
@@ -11,7 +12,7 @@ function readFile(evt) {
         console.log(i);
             i.src = event.target.result;
             i.onload = function(){
-                
+                pdff = i.src;
                 console.log("Image loaded");
             }
     };
@@ -46,7 +47,7 @@ function readFile(evt) {
         return false;
     }
 
-/*    var quality = prompt("Enter Percentage upto which of Image to be Compressed", "30");  // we can do this manually */
+/*    var quality = prompt("Enter Percentage upto which Image should be Compressed", "30");  // we can do this manually */
    // console.log("qualPre" + quality);
     quality = parseInt(quality);
    // console.log("qualPost" + quality);

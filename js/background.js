@@ -12,15 +12,19 @@ var jic = {
              } else {
                 mime_type = "image/jpeg";
              }
-
-             var cvs = document.createElement('canvas');
-             cvs.width = source_img_obj.naturalWidth;
-             cvs.height = source_img_obj.naturalHeight;
-             var ctx = cvs.getContext("2d").drawImage(source_img_obj, 0, 0);
-             var newImageData = cvs.toDataURL(mime_type, quality/100);
-             var result_image_obj = new Image();
-             result_image_obj.src = newImageData;
-             return result_image_obj;
+            //  if (mime_type = "application/pdf"){
+            //     compresspdf(pdff);
+            //  }
+            //  else {
+                var cvs = document.createElement('canvas');
+                cvs.width = source_img_obj.naturalWidth;
+                cvs.height = source_img_obj.naturalHeight;
+                var ctx = cvs.getContext("2d").drawImage(source_img_obj, 0, 0);
+                var newImageData = cvs.toDataURL(mime_type, quality/100);
+                var result_image_obj = new Image();
+                result_image_obj.src = newImageData;
+                return result_image_obj;
+            //  }
         },
 
         download: function(compressed_img_obj, download_url, file_input_name, filename, successCallback, errorCallback, duringCallback, customHeaders){
