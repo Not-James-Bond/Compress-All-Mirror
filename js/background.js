@@ -27,7 +27,7 @@ var jic = {
             //  }
         },
 
-        download: function(compressed_img_obj, download_url, file_input_name, filename, successCallback, errorCallback, duringCallback, customHeaders){
+        download: function(compressed_img_obj, filename){
 
             if (XMLHttpRequest.prototype.sendAsBinary === undefined) {
                 XMLHttpRequest.prototype.sendAsBinary = function(string) {
