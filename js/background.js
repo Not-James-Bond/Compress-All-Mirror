@@ -50,41 +50,6 @@ var jic = {
             var data = compressed_img_obj.src;
             data = data.replace('data:' + type + ';base64,', '');
 
-        //     var xhr = new XMLHttpRequest();
-        //     xhr.open('POST', upload_url, true);
-        //     var boundary = 'someboundary';
-
-        //     xhr.setRequestHeader('Content-Type', 'multipart/form-data; boundary=' + boundary);
-		
-		// if (customHeaders && typeof customHeaders === "object") {
-		// 	for (var headerKey in customHeaders){
-		// 		xhr.setRequestHeader(headerKey, customHeaders[headerKey]);
-		// 	}
-		// }
-		
-		// if (duringCallback && duringCallback instanceof Function) {
-		// 	xhr.upload.onprogress = function (evt) {
-		// 		if (evt.lengthComputable) {  
-		// 			duringCallback ((evt.loaded / evt.total)*100);  
-		// 		}
-		// 	};
-		// }
-		
-        //     xhr.sendAsBinary(['--' + boundary, 'Content-Disposition: form-data; name="' + file_input_name + '"; filename="' + filename + '"', 'Content-Type: ' + type, '', atob(data), '--' + boundary + '--'].join('\r\n'));
-            
-        //     xhr.onreadystatechange = function() {
-		// 	if (this.readyState == 4){
-		// 		if (this.status == 200) {
-		// 			successCallback(this.responseText);
-		// 		}else if (this.status >= 400) {
-		// 			if (errorCallback &&  errorCallback instanceof Function) {
-		// 				errorCallback(this.responseText);
-		// 			}
-		// 		}
-		// 	}
-        //     };
-
-
             var data = compressed_img_obj.src;
             console.log("data" + data);
             console.log(compressed_img_obj.src);
