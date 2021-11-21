@@ -1,0 +1,28 @@
+{
+  "name": "Compress-All",
+  "version": "1.0.0",
+  "description": "Building Basic Extension",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sushiSushanshi/Compress-All.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sushiSushanshi/Compress-All/issues"
+  },
+  "homepage": "https://github.com/sushiSushanshi/Compress-All#readme",
+  "dependencies": {
+    "-": "0.0.1",
+    "@ilovepdf/ilovepdf-nodejs": "^0.1.0",
+    "browserify": "^17.0.0",
+    "compress-js": "^2.0.2",
+    "require": "^2.4.20",
+    "required": "^1.0.0"
+  }
+}

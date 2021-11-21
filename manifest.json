@@ -3,16 +3,15 @@
     "name": "Compress All",
     "version": "0.1",
     "browser_action": {
-        "default_popup": "ui/popup.html",
+        "default_popup": "popup.html",
         "default_icon": "icons/icon.png"
       },
       "permissions": [
-        "contextMenus"
+        "activeTab"
       ],
       "icons": {
-        "16": "icons/icon-bitty.png",
-        "48": "icons/icon-small.png",
-        "128": "icons/icon-large.png"
+        "56": "icons/logo.png",
+        "144": "icons/icon-large.png"
       },
 
     "content_scripts": [
@@ -25,8 +24,7 @@
       ]  ,
       "background": {
         "scripts": [
-          "js/background.js",
-          "js/launch.js"
+          "js/background.js"
         ],
         "persistent": true
       } 

@@ -1,3 +1,3 @@
 ## Compress-All
 
-Extension to compress various type of files
+Building Basic Client-Side Extension for Compressing IMG and PDF
