@@ -2,9 +2,18 @@ img {border-width: 0}
 * {
     font-family:'Lucida Grande', sans-serif;
 }
-
-.headin {
-  padding-left: 15px;
+.logo{
+    height: 80px;
+    width: 120px;
+}
+.heading {
+  text-align: center;
+  padding-bottom: 30px;
+}
+.heading-text{
+    font-size: 25px;
+    font-family: sans-serif;
+    color: #000;
 }
 
 .block a:hover{

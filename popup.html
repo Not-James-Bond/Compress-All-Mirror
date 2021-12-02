@@ -8,14 +8,17 @@
 	</head>
 	<body>
  		 <p>
-			  <div class="headin">
-			  <p>Compress Images and PDFs</p>
+			<div class="heading">
+			<img src="./icons/Logo.png" class="logo" alt="Compress All Logo">
+			<div class="heading-text">Compress Images</div>
+				<br>
+					<input type="button" id="btnOpenNewTab" value="Compress PDF" class="btn-primary"></p>
 			  </div>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4 border">
 				<form id="upload_form">
-					<label for="file">Choose file</label>
+					<label for="file">Choose Image</label>
 					<input type="file" id="fileinput" />
 			
 				</form>
@@ -52,6 +55,8 @@
 		<script src="js/jquery-1.12.4.min.js"></script>
 		<script src="js/background.js"></script>
 		<script src="js/process.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+		<script src="js/newTab.js"></script>
 		</p>            
 
 		<br />	

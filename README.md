@@ -1,3 +1,3 @@
 ## Compress-All
 
-Building Basic Extension
+Building Basic Client-Side Extension for Compressing IMG and PDF
