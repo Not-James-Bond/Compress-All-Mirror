@@ -7,13 +7,15 @@
         "default_icon": "icons/icon.png"
       },
       "permissions": [
-        "activeTab"
+        "activeTab",
+        "notifications",
+        "fontSettings"
       ],
+      
       "icons": {
         "56": "icons/logo.png",
         "144": "icons/icon-large.png"
       },
-
     "content_scripts": [
         {
           "matches": [
